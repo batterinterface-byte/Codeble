@@ -1,0 +1,58 @@
+:root {
+  --bg-deep: #0b0d13;
+  --bg-panel: #131a24;
+  --bg-surface: #1c2333;
+  --bg-hover: #242d3d;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #6b7280;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-ring: rgba(59, 130, 246, 0.5);
+  --border: #2d3748;
+  --border-light: #1e293b;
+  --green: #22c55e;
+  --green-dim: rgba(34, 197, 94, 0.15);
+  --orange: #f59e0b;
+  --orange-dim: rgba(245, 158, 11, 0.15);
+  --red: #ef4444;
+  --red-dim: rgba(239, 68, 68, 0.15);
+  --purple: #a855f7;
+  --purple-dim: rgba(168, 85, 247, 0.15);
+  --pink: #ec4899;
+  --pink-dim: rgba(236, 72, 153, 0.15);
+  --cyan: #06b6d4;
+  --cyan-dim: rgba(6, 182, 212, 0.15);
+  --navy: #1e293b;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --radius: 0.75rem;
+  --radius-sm: 0.5rem;
+  --radius-xs: 0.375rem;
+  --sidebar-width: 380px;
+  --header-height: 52px;
+
+  --gradient-accent: linear-gradient(135deg, #3b82f6, #a855f7);
+  --gradient-header: linear-gradient(135deg, #0b0d13 0%, #131a24 50%, #1c2333 100%);
+  --gradient-chat-user: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(168,85,247,0.1));
+  --gradient-chat-agent: linear-gradient(135deg, rgba(6,182,212,0.1), rgba(34,197,94,0.05));
+  --gradient-panel: linear-gradient(180deg, rgba(19,26,36,0.8), rgba(11,13,19,0.9));
+  --gradient-btn: linear-gradient(135deg, #3b82f6, #2563eb);
+  --gradient-btn-hover: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  --glow-accent: 0 0 20px rgba(59,130,246,0.15);
+  --glow-purple: 0 0 20px rgba(168,85,247,0.12);
+  --glow-green: 0 0 20px rgba(34,197,94,0.10);
+
+  /* Responsive breakpoints as CSS vars (used in JS media queries) */
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 100vw;
+    --header-height: 48px;
+  }
+}
