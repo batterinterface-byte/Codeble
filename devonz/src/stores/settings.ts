@@ -1,7 +1,7 @@
 import { atom } from 'nanostores'
 
 export type ThemeMode = 'dark' | 'light' | 'system'
-export type LLMProvider = 'ollama' | 'openai' | 'anthropic' | 'openrouter'
+export type LLMProvider = 'ollama' | 'openai' | 'anthropic' | 'openrouter' | 'opencode'
 
 interface Settings {
   theme: ThemeMode

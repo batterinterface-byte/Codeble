@@ -15,6 +15,7 @@ const providers: { value: LLMProvider; label: string }[] = [
   { value: 'openai', label: 'OpenAI' },
   { value: 'anthropic', label: 'Anthropic' },
   { value: 'openrouter', label: 'OpenRouter' },
+  { value: 'opencode', label: 'OpenCode' },
 ]
 
 export function SettingsSidebar({ open, onClose }: SettingsSidebarProps) {
