@@ -3,7 +3,8 @@ import { useStore } from '@nanostores/react'
 import { $remoteCursors, $collabUsers, $isCollabConnected } from '../../stores/collab'
 import { $auth } from '../../stores/session'
 
-const WS_COLLAB_URL = `ws://${window.location.hostname}:4090/ws`
+const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:'
+const WS_COLLAB_URL = `${protocol}//${window.location.hostname}:4090/ws`
 
 export function CollaborationPanel() {
   const connected = useStore($isCollabConnected)
@@ -17,7 +18,13 @@ export function CollaborationPanel() {
     if (!auth) return
 
     const connect = () => {
-      const ws = new WebSocket(`${WS_COLLAB_URL}?token=${auth.token}`)
+      let ws
+      try {
+        ws = new WebSocket(`${WS_COLLAB_URL}?token=${auth.token}`)
+      } catch {
+        setTimeout(connect, 3000)
+        return
+      }
       ws.onopen = () => {
         $isCollabConnected.set(true)
         ws.send(JSON.stringify({ type: 'join', userId: auth.token, userName: 'Devonz User' }))
