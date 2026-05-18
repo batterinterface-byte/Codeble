@@ -60,14 +60,15 @@ export function GitModal({ open, onClose }: GitModalProps) {
             />
           </div>
 
-          <div className="flex gap-2">
-            <Button variant="secondary" onClick={onClose} disabled={status !== 'idle'}>
+          <div className="flex gap-2 md:flex-col">
+            <Button variant="secondary" onClick={onClose} disabled={status !== 'idle'} className="md:w-full">
               Cancel
             </Button>
             <Button
               variant="primary"
               onClick={handleCommit}
               disabled={!commitMessage.trim() || status !== 'idle'}
+              className="md:w-full"
             >
               {status === 'committing' ? 'Committing...' :
                status === 'success' ? 'Committed!' :

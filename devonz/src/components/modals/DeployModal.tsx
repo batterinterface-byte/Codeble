@@ -33,7 +33,7 @@ export function DeployModal({ open, onClose }: DeployModalProps) {
 
         {!deployed ? (
           <div className="space-y-4">
-            <div className="flex gap-3">
+            <div className="flex gap-3 md:flex-col md:gap-2">
               <button
                 onClick={() => setTarget('vercel')}
                 className={`flex-1 p-4 rounded-xl border text-center transition-all ${

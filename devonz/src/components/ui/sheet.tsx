@@ -17,8 +17,8 @@ export const SheetContent = forwardRef<
       ref={ref}
       className={twMerge(clsx(
         'fixed z-50 bg-panel border-border shadow-2xl data-[state=open]:animate-fade-in',
-        side === 'right' && 'right-0 top-0 h-full w-[360px] border-l',
-        side === 'left' && 'left-0 top-0 h-full w-[360px] border-r',
+        side === 'right' && 'right-0 top-0 h-full w-[360px] border-l md:w-full md:border-l-0',
+        side === 'left' && 'left-0 top-0 h-full w-[360px] border-r md:w-full md:border-r-0',
         className,
       ))}
       {...props}

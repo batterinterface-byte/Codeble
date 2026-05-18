@@ -12,7 +12,11 @@ interface TreeNode {
   expanded?: boolean
 }
 
-export function FileExplorer() {
+interface FileExplorerProps {
+  onClose?: () => void
+}
+
+export function FileExplorer({ onClose }: FileExplorerProps) {
   const projectId = useStore($projectId)
   const [tree, setTree] = useState<TreeNode[]>([])
   const [expanded, setExpanded] = useState<Set<string>>(new Set())
@@ -100,12 +104,22 @@ export function FileExplorer() {
         <div className="flex items-center gap-2">
           <span className="text-sm font-medium text-primary">Files</span>
         </div>
-        <button
-          onClick={loadTree}
-          className="text-xs text-muted hover:text-secondary transition-colors cursor-pointer bg-transparent border-none"
-        >
-          ↻
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={loadTree}
+            className="text-xs text-muted hover:text-secondary transition-colors cursor-pointer bg-transparent border-none"
+          >
+            ↻
+          </button>
+          {onClose && (
+            <button
+              onClick={onClose}
+              className="text-xs text-muted hover:text-primary transition-colors cursor-pointer bg-transparent border-none md:inline hidden"
+            >
+              ✕
+            </button>
+          )}
+        </div>
       </div>
       <div className="flex-1 overflow-y-auto py-1">
         {loading && <div className="px-4 py-4 text-xs text-muted">Loading...</div>}

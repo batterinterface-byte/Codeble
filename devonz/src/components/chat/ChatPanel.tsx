@@ -43,7 +43,7 @@ export function ChatPanel({ onClose }: ChatPanelProps) {
           {onClose && (
             <button
               onClick={onClose}
-              className="text-xs text-secondary/60 hover:text-primary transition-colors cursor-pointer bg-transparent border-none md:hidden"
+              className="text-xs text-secondary/60 hover:text-primary transition-colors cursor-pointer bg-transparent border-none md:inline hidden"
             >
               ✕
             </button>

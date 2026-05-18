@@ -33,7 +33,7 @@ export const DialogContent = forwardRef<
     <DialogPrimitive.Content
       ref={ref}
       className={twMerge(clsx(
-        'fixed left-1/2 top-1/2 z-50 max-h-[85vh] w-[90vw] max-w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-xl bg-panel border border-border p-6 shadow-2xl data-[state=open]:animate-fade-in',
+        'fixed left-1/2 top-1/2 z-50 max-h-[85vh] w-[90vw] max-w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-xl bg-panel border border-border p-6 shadow-2xl data-[state=open]:animate-fade-in md:left-0 md:bottom-0 md:top-auto md:translate-x-0 md:translate-y-0 md:w-full md:max-w-full md:max-h-full md:h-full md:rounded-none md:border-0 md:p-4 md:shadow-none',
         className,
       ))}
       {...props}
