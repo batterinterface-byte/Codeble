@@ -3,7 +3,8 @@ import { Terminal } from '@xterm/xterm'
 import { FitAddon } from '@xterm/addon-fit'
 import '@xterm/xterm/css/xterm.css'
 
-const TERMINAL_WS_URL = `ws://${window.location.hostname}:4090/ws/terminal`
+const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:'
+const TERMINAL_WS_URL = `${protocol}//${window.location.hostname}:4090/ws/terminal`
 
 export function TerminalPanel() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -59,7 +60,14 @@ export function TerminalPanel() {
 
     // WebSocket connection for real PTY
     const connectWS = () => {
-      const ws = new WebSocket(TERMINAL_WS_URL)
+      let ws
+      try {
+        ws = new WebSocket(TERMINAL_WS_URL)
+      } catch {
+        term.write('\r\n\x1b[90m[terminal server offline]\x1b[0m\r\n')
+        setTimeout(connectWS, 2000)
+        return
+      }
 
       ws.onopen = () => {
         term.reset()
