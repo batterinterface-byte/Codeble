@@ -438,8 +438,39 @@
   --text-primary: #0f172a;
   --text-secondary: #64748b;
   --text-muted: #94a3b8;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-ring: rgba(59, 130, 246, 0.3);
   --border: #e2e8f0;
   --border-light: #f1f5f9;
+  --green: #16a34a;
+  --green-dim: rgba(22, 163, 74, 0.1);
+  --orange: #d97706;
+  --orange-dim: rgba(217, 119, 6, 0.1);
+  --red: #dc2626;
+  --red-dim: rgba(220, 38, 38, 0.1);
+  --purple: #9333ea;
+  --purple-dim: rgba(147, 51, 234, 0.1);
+  --pink: #db2777;
+  --pink-dim: rgba(219, 39, 119, 0.1);
+  --cyan: #0891b2;
+  --cyan-dim: rgba(8, 145, 178, 0.1);
+  --navy: #cbd5e1;
+  --gradient-accent: linear-gradient(135deg, #3b82f6, #9333ea);
+  --gradient-header: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+  --gradient-chat-user: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(147,51,234,0.04));
+  --gradient-chat-agent: linear-gradient(135deg, rgba(8,145,178,0.06), rgba(22,163,74,0.03));
+  --gradient-panel: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(248,250,252,0.9));
+  --gradient-btn: linear-gradient(135deg, #3b82f6, #2563eb);
+  --gradient-btn-hover: linear-gradient(135deg, #2563eb, #1d4ed8);
+  --glow-accent: 0 0 20px rgba(59,130,246,0.12);
+  --glow-purple: 0 0 20px rgba(147,51,234,0.1);
+  --glow-green: 0 0 20px rgba(22,163,74,0.08);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.08);
+  --shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.1);
+  --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.04);
 }
 
 // ─── Component classes ────────────────────────────────

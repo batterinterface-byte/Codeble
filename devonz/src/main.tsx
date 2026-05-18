@@ -12,8 +12,6 @@ meta.name = 'theme-color'
 meta.content = '#0a0a0a'
 document.head.appendChild(meta)
 
-document.documentElement.classList.add('dark')
-
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ErrorBoundary>

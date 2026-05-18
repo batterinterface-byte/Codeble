@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { Workbench } from './components/workbench/Workbench'
 import { useKeyboardShortcuts } from './hooks/useKeyboardShortcuts'
+import { useTheme } from './hooks/useTheme'
 import { CommandPalette } from './components/palette/CommandPalette'
 import { KeyboardShortcutsModal } from './components/shortcuts/KeyboardShortcutsModal'
 import { SearchPanel } from './components/search/SearchPanel'
@@ -13,6 +14,7 @@ import { $showTemplatePicker } from './stores/templates'
 
 export function App() {
   useKeyboardShortcuts()
+  useTheme()
   const showSearch = useStore($showSearch)
   const showShortcuts = useStore($showShortcuts)
   const showTemplates = useStore($showTemplatePicker)
