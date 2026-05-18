@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const body = JSON.parse(req.body);
+    const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
     const { message, provider, model } = body;
 
     if (!message) {
