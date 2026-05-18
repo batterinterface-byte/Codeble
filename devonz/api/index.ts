@@ -1,4 +1,5 @@
 import { Hono } from 'hono'
+import { handle } from 'hono/vercel'
 import { cors } from 'hono/cors'
 
 // ─── Vercel-compatible API ───────────────────────────
@@ -195,4 +196,4 @@ app.get('/api/proxy/*', async (c) => {
   }
 })
 
-export default app
+export default handle(app)
